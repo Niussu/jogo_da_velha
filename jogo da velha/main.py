@@ -22,9 +22,10 @@ for i in range(9):
         choice_col = int(input("Digite a coluna onde deseja marcar: "))
         
 
-        while is_marked(choice_line, choice_col, gameboard):
+        while is_marked(choice_line, choice_col, gameboard) or out_of_index(choice_line, choice_col):
             print("-"*50)
-            print(f'Linha {choice_line} e coluna {choice_col} já estão ocupados \nEscolha outra posição!!!')
+            print(f'Linha {choice_line} e coluna {choice_col} já estão ocupados ou estão fora do tamanho da matriz \nEscolha outra posição!!!')
+            print("")
             choice_line = int(input("Digite a linha onde deseja marcar: "))
             choice_col = int(input("Digite a coluna onde deseja marcar: "))
 
@@ -54,9 +55,10 @@ for i in range(9):
         choice_line = int(input("Digite a linha onde desaja marcar: "))
         choice_col = int(input("Digite a coluna onde deseja marcar: "))
 
-        while is_marked(choice_line, choice_col, gameboard):
+        while is_marked(choice_line, choice_col, gameboard) or out_of_index(choice_line, choice_col):
             print("-"*50)
-            print(f'Linha {choice_line} e coluna {choice_col} já estão ocupados \nEscolha outra posição!!!')
+            print(f'Linha {choice_line} e coluna {choice_col} já estão ocupados ou estão fora do tamanho da matriz \nEscolha outra posição!!!')
+            print()
             choice_line = int(input("Digite a linha onde deseja marcar: "))
             choice_col = int(input("Digite a coluna onde deseja marcar: "))
             
