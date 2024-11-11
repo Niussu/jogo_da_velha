@@ -12,10 +12,11 @@ def mark_matrix(line, col, gameboard, player):
     return gameboard
 
 def is_marked(line, col, gameboard):
-    if gameboard[line][col] != 0:
-        return True
-    else:
-        return False
+    try:
+        if gameboard[line][col] != 0:
+            return True
+    except:
+            return False
 
 def win_condition(gameboard):
 
@@ -55,7 +56,7 @@ def update_gui_matrix(gameboard, gui_gameboard):
 
 def show_gui_gameboard(gui_gameboard):
     print("\t0\t1\t2")
-    #print("\t________________")
+
     print("")
     for i in range(3):
         print(i, end='\t')
@@ -63,3 +64,11 @@ def show_gui_gameboard(gui_gameboard):
             print(gui_gameboard[i][j], end='\t')
         print("\n")
     print("\n")
+
+def out_of_index(line, col):
+    if line < 0 or line > 2:
+        return True
+    elif col < 0 or col > 2:
+        return True
+    else:
+        return False
