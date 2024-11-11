@@ -76,3 +76,5 @@ for i in range(9):
                 print(f"| PARABÉNS {player2}, VOCÊ GANHOU!!! |")
                 print("-"*33)
                 break
+if condition == 0:
+    print(f"O JOGO EMPATOU!!!")
